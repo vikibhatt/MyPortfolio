@@ -4,14 +4,17 @@ import SkillBox from "../../chip/SkillBox";
 
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 
-
+import { VscAzureDevops } from "react-icons/vsc";
 import {
   SiJavascript,
   SiTailwindcss,
   SiMongodb,
   SiExpress,
+  SiPuppet,
+  SiCheckmk,
+  SiMicrosoftazure
 } from "react-icons/si";
-import { FaJava } from 'react-icons/fa'; 
+import { FaJava, FaAws } from 'react-icons/fa'; 
 import { GrCode } from "react-icons/gr";
 import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
@@ -43,17 +46,21 @@ const Skills = ({ darkMode }) => {
               className="progress flex items-center h-[100%] justify-end md:justify-center"
             >
               <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[90%]">
-                <ProgressBar logo={<FaJava />} name={"JAVA"} value={98} />
-                <ProgressBar logo={<IoLogoHtml5 />} name={"HTML"} value={95} />
+              <ProgressBar logo={<SiPuppet />} name={"Puppet"} value={78} />
+              <ProgressBar logo={<SiCheckmk />} name={"CheckMk"} value={82} />
+              <ProgressBar logo={<FaAws />} name={"AWS"} value={85} />
+              <ProgressBar logo={<SiMicrosoftazure />} name={"Azure"} value={85} />
+                <ProgressBar logo={<FaJava />} name={"JAVA"} value={80} />
+                <ProgressBar logo={<IoLogoHtml5 />} name={"HTML"} value={85} />
                 <ProgressBar logo={<IoLogoCss3 />} name={"CSS"} value={85} />
                 <ProgressBar
                   logo={<SiJavascript />}
                   name={"Javascript"}
                   value={89}
                 />
-                <ProgressBar logo={<IoLogoNodejs />} name={"Node Js"} value={75} />
-                <ProgressBar logo={<SiExpress />} name={"Express"} value={75} />
-                <ProgressBar logo={<FaReact />} name={"React Js"} value={80} />
+                <ProgressBar logo={<IoLogoNodejs />} name={"Node Js"} value={80} />
+                <ProgressBar logo={<SiExpress />} name={"Express"} value={80} />
+                <ProgressBar logo={<FaReact />} name={"React Js"} value={85} />
                 <ProgressBar
                   logo={<SiTailwindcss />}
                   name={"Tailwind CSS"}
@@ -67,35 +74,26 @@ const Skills = ({ darkMode }) => {
           <div className="right relative flex-1 flex flex-wrap p-5 gap-10 items-center justify-center sm:w-full">
             <div className="first2 flex flex-col gap-10">
               <SkillBox
-                logo={<IoLogoNodejs />}
+                logo={<SiPuppet />}
                 black={"white"}
                 white={"black"}
-                skill={"Node JS"}
+                skill={"Puppet"}
               />
               <SkillBox
-                logo={<SiMongodb />}
+                logo={<SiCheckmk />}
                 black={"white"}
                 white={"black"}
-                skill={"MongoDB"}
+                skill={"Checkmk"}
+              />
+              <SkillBox
+                logo={<VscAzureDevops />}
+                black={"white"}
+                white={"black"}
+                skill={"CI/CD"}
               />
             </div>
             <div className="last2 flex flex-col gap-10">
               <SkillBox
-                logo={<SiExpress />}
-                black={"black"}
-                white={"white"}
-                skill={"Express JS"}
-              />
-              <SkillBox
-                className=""
-                logo={
-                  <FaJava/>
-                }
-                black={"black"}
-                white={"white"}
-                skill={"Java"}
-              />
-              {/* <SkillBox
                 className=""
                 logo={
                   <SiNextdotjs className=" text-white bg-black rounded-full h-fit border-white overflow-hidden" />
@@ -103,7 +101,22 @@ const Skills = ({ darkMode }) => {
                 black={"black"}
                 white={"white"}
                 skill={"Next Js"}
-              /> */}
+              />
+              <SkillBox
+                logo={<FaAws />}
+                black={"black"}
+                white={"white"}
+                skill={"AWS"}
+              />
+              <SkillBox
+                className=""
+                logo={
+                  <SiMicrosoftazure/>
+                }
+                black={"black"}
+                white={"white"}
+                skill={"Azure"}
+              />
             </div>
           </div>
         </div>
